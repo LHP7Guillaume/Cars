@@ -7,7 +7,7 @@ class Mycars extends Component {
         <div>
         <h1>Hello React</h1>
         <Cars color="red">Ford</Cars>
-        <Cars color="blue">Mercedes</Cars>
+        <Cars color="">Mercedes</Cars>
         <Cars color="grey">Volvo</Cars>
 </div>
 )
