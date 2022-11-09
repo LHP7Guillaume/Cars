@@ -4,16 +4,25 @@ const Cars = ({children, color}) => {
 
 const colorInfo = color ? (<p>Couleurs : { color } </p>) : (<p>Couleurs : Néant </p>) ;
 
+if (children) {
     return(
         <div style={ {backgroundColor: 'pink', width: '400px', padding: '10px', margin: '5px auto'}}>
     <p>Marque : { children } </p>
+  
+{ colorInfo}
 
-    {/* <p>Couleurs : { color } </p> */}
-{/* la balise <p></p> est remplacé par la constante colorInfo que je recupere avec la balise cidessous */}
-    { colorInfo}
+</div>  
+    )
+} else {
+    return (
+        <div style={ {backgroundColor: 'pink', width: '400px', padding: '10px', margin: '5px auto'}}>
+        <p>Pas de data</p>
+        </div>
+    )
+    
+}
 
-        </div>  
-  )
+    
 }
 
 export default Cars;
