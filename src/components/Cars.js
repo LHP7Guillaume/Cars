@@ -1,27 +1,22 @@
 import React from 'react' ;
+import Wrappers from './Wrapper';
 
 const Cars = ({children, color}) => {
 
-const colorInfo = color ? (<p>Couleurs : { color } </p>) : (<p>Couleurs : Néant </p>) ;
-
-if (children) {
-    return(
-        <div style={ {backgroundColor: 'pink', width: '400px', padding: '10px', margin: '5px auto'}}>
-    <p>Marque : { children } </p>
-  
-{ colorInfo}
-
-</div>  
-    )
+let colorInfo = "";
+if (color){
+    colorInfo = color;
 } else {
-    return (
-        <div style={ {backgroundColor: 'pink', width: '400px', padding: '10px', margin: '5px auto'}}>
-        <p>Pas de data</p>
-        </div>
-    )
-    
+    colorInfo = "Néant";
 }
 
+return children && (
+
+    <Wrappers>
+    <p>Marque : { children }</p>
+    <p>Couleur : { colorInfo }</p>
+    </Wrappers>
+)
     
 }
 
