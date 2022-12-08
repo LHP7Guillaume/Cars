@@ -10,6 +10,9 @@ if (color){
     colorInfo = "Néant";
 }
 
+// const colorInfo = color ? color : "Néant" ;
+
+
 return children && (
 
     <Wrappers>
